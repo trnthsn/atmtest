@@ -6,7 +6,7 @@
 #include "login.h"
 using namespace std;
 
-vector<Account> listAccount;
+vector<string> listData;
 
 int main()
 {
@@ -32,10 +32,10 @@ int main()
                 getline(cin, id);
                 cout << "Nhap pass" << endl;
                 getline(cin, password);
-                getListAccount(listAccount);
+                getListData(listData);
 
-                cout << listAccount.size();
-
+                cout << listData.size();
+                cin >> select;
                 if (select == 3)
                     running = false;
             }

@@ -6,9 +6,12 @@
 #include "account.h"
 
 using namespace std;
-
-bool CheckAccount(string id, string password, vector <Account> &listAccount);
-bool CheckAppear(string id, string password, vector <Account> &listAccount);
+// long long convertStringToNumber(const string &s);
+bool compare2string(const string &a, const string &b);
+bool checkIDAppear(const string &ID, vector<string> &listData);
+long long getAddressCustomer(const string &ID, vector <string> &listData);
+bool checkPassword(const string &ID, const string &InputedPassword, vector <string> &listData);
+bool checkCondition(const string &ID, vector<string> &listData);
 
 #endif // LOGIN_H
 
