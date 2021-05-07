@@ -28,14 +28,25 @@ int main()
             if (select == 1)
             {
                 string id, password;
+                getListData(listData);
                 cout << "Nhap id" << endl;
                 getline(cin, id);
-                cout << "Nhap pass" << endl;
-                getline(cin, password);
-                getListData(listData);
-
-                cout << listData.size();
-                cin >> select;
+                if (checkIDAppear(id, listData) == true)
+                {
+                    cout << "Nhap pass" << endl;                    
+                    getline(cin, password);
+                    if (checkPassword(id, password, listData))
+                    {
+                        cout << boolalpha << "true";
+                    }
+                    cout << listData.size();
+                }
+                else
+                {
+                    choose = 2;
+                }
+                    cin >> select;
+                
                 if (select == 3)
                     running = false;
             }
